@@ -1,0 +1,75 @@
+<ion-content>
+  <div style="background:black;padding: 20px 0px 20px 0px"> 
+  <span *ngIf="display==''" class="span-calc">
+     0
+  </span>
+  <span *ngIf="display!=''" class="span-calc">
+      {{display}}
+   </span>
+  </div>
+
+  <ion-grid class="for-all-buttons">
+      <ion-row style="margin-top:10px">
+        <ion-col>
+          <button ion-button round large (click)="getNumber(1)">1</button>
+        </ion-col>
+        <ion-col>
+            <button ion-button round large (click)="getNumber(2)">2</button>
+        </ion-col>
+        <ion-col>
+            <button ion-button round large (click)="getNumber(3)">3</button>
+          </ion-col>
+          <ion-col>
+              <button ion-button round large (click)="getSign('+')"><ion-icon name="add"></ion-icon></button>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <button ion-button round large (click)="getNumber(4)">4</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button round large (click)="getNumber(5)">5</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button round large (click)="getNumber(6)">6</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large (click)="getSign('-')"><ion-icon name="remove"></ion-icon>
+                  </button>
+                </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <button ion-button round large (click)="getNumber(7)">7</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button round large (click)="getNumber(8)">8</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button round large (click)="getNumber(9)">9</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large (click)="getSign('*')"><ion-icon name="close"></ion-icon>
+                  </button>
+                </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button round large (click)="back()">  <ion-icon name="arrow-back"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large (click)="getNumber(0)">0</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large style="font-size:22px"><b>=</b></button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button round large (click)="getSign('/')">/</button>
+                  </ion-col>
+          </ion-row>
+    </ion-grid>
+<div text-center>
+    <button ion-button round (click)="clear()" color="danger" large>clear all</button>
+  </div>
+</ion-content>
